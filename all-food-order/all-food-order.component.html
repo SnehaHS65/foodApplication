@@ -1,0 +1,62 @@
+<div class="container">
+  <br>
+    <h3>Food Order Table</h3>
+    <br>
+    <table class="table">
+
+        <thead>
+
+          <tr>
+
+            <th scope="col">Status</th>
+
+            <th scope="col">Total Price</th>
+
+            <th scope="col">Order Created Time</th>
+
+            <th scope="col">Order Delivery Time</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Contact No</th>
+            <th scope="col">Email</th>
+            <th scope="col">User ID</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+
+        <tr *ngFor="let r of result.t">
+
+        
+
+        <td>{{r.status}}</td>
+
+        <td>{{r.totalPrice}}</td>
+
+        <td>{{r.orderCreatedTime}}</td>
+        <td>{{r.orderDeliveryTime}}</td>
+        <td>{{r.customerName}}</td>
+
+        <td>{{r.contactNumber}}</td>
+        <td>{{r.email}}</td>
+
+        <td>{{r.id}}</td>
+        
+        <td><button type="button" class="btn btn-primary" [routerLink]="['/updateorders/',r.id]" >Update</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="deleteFood(r.id)">Delete</button></td>
+        <!-- <td><button type="button" class="btn btn-primary" (click)="bill(r.email,r.id)">Bill</button></td> -->
+   
+        
+
+    </tr>
+
+    </tbody>
+
+  </table>
+  </div>

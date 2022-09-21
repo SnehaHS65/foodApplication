@@ -1,0 +1,87 @@
+<div class="container">
+    <h3>Enter new Item details</h3>
+    <form #add="ngForm" (ngSubmit)="addItem(add)">
+        <div class="form-group">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="productId" 
+              placeholder="Enter Product ID"
+              name="productId"
+              #productId="ngModel"
+              required
+              [(ngModel)]="item.productId"
+              >
+<br>
+
+            <input 
+              type="text" 
+              class="form-control" 
+              id="name" 
+              placeholder="Enter Item Name"
+              name="name"
+              #name="ngModel"
+              required
+              [(ngModel)]="item.name"
+              >
+              </div>
+        <div class="form-group">
+            <input 
+              type="number" 
+              class="form-control" 
+              id="price" 
+              placeholder="Enter Item Price"
+              name="price"
+              #price="ngModel"
+              required
+              [(ngModel)]="item.price"
+              >
+            </div>
+            <div class="form-group">
+            <input 
+              type="quantity" 
+              class="form-control" 
+              id="quantity" 
+              placeholder="Enter Item Quantity"
+              name="quantity"
+              #quantity="ngModel"
+              required
+              [(ngModel)]="item.quantity"
+              >
+            </div>
+            <div>
+              <div class="form-group">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="type" 
+              placeholder="Enter Item Type"
+              name="type"
+              #type="ngModel"
+              required
+              [(ngModel)]="item.type"
+              >
+            </div>
+      <div>
+        <div>
+      <div class="form-group">
+            <input 
+              type="number" 
+              class="form-control" 
+              id="food_order_id" 
+              placeholder="Enter Food Order ID"
+              name="food_order_id"
+              #id="ngModel"
+              required
+              [(ngModel)]="item.foodOrder.id"
+              >
+            </div>
+          </div>
+
+          
+            
+            
+                          
+  <button type="submit" class="btn btn-primary">GO</button>
+  
+  

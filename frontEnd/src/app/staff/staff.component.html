@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: sticky;">
+    <a class="navbar-brand" href="#" >Food App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">FoodOrder</a>
+          <div class="dropdown-menu">
+            <a (click)="addData()" class="nav-link" href="/food-order">Add FoodOrder</a>
+            <a (click)="viewOrder()" class="nav-link" href="/all-food-order">Order Details</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Item</a>
+          <div class="dropdown-menu">
+            <a (click)="addItem()" class="nav-link" href="/item">Add Item</a>
+            <a (click)="viewItem()" class="nav-link" href="/all-item">Item Details</a>
+          </div>
+        </li>
+        
+        <button type="button" (click)="logout()">Logout</button>
+      
+      </ul>
+    </div>
+  </nav>
+
+  
+
+
+

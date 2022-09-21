@@ -1,0 +1,81 @@
+<div class="container">
+  
+    <h3>Enter new Menu details</h3>
+    <form #add="ngForm" (ngSubmit)="addMenu(add)">
+      <div>
+        <div class="form-group">
+            <input 
+              type="number" 
+              class="form-control" 
+              id="id" 
+              placeholder="Enter Menu Id"
+              name="id"
+              #name="ngModel"
+              required
+              [(ngModel)]="menu.id"
+              >
+            </div>
+        <div class="form-group">
+            <input 
+              type="number" 
+              class="form-control" 
+              id="user_id" 
+              placeholder="Enter Manager ID"
+              name="user_id"
+              #user_id="ngModel"
+              required
+              [(ngModel)]="menu.user.id"
+              >
+            </div>
+            <div class="form-group">
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="name" 
+                  placeholder="Enter Manager name"
+                  name="name"
+                  #name="ngModel"
+                  required
+                  [(ngModel)]="menu.user.name"
+                  >
+                </div>
+                <div class="form-group">
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="email" 
+                      placeholder="Enter Manager email"
+                      name="email"
+                      #email="ngModel"
+                      required
+                      [(ngModel)]="menu.user.email"
+                      >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          id="password" 
+                          placeholder="Enter Manager password"
+                          name="password"
+                          #password="ngModel"
+                          required
+                          [(ngModel)]="menu.user.password"
+                          >
+                        </div>
+                        <div class="form-group">
+                            <input 
+                              type="text" 
+                              class="form-control" 
+                              id="role" 
+                              placeholder="Enter Manager role"
+                              name="role"
+                              #role="ngModel"
+                              required
+                              [(ngModel)]="menu.user.role"
+                              >
+                            </div>
+                          
+        <button type="submit" class="btn btn-primary">ADD</button>
+      <form></form>
+    </div>

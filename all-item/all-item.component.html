@@ -1,0 +1,63 @@
+<div class="container">
+    <br>
+      <h3>Items List</h3>
+      <br>
+      <table class="table">
+  
+          <thead>
+  
+            <tr>
+  
+              <th scope="col">Product Id</th>
+  
+              <th scope="col">Name</th>
+  
+              <th scope="col">Type</th>
+  
+              <th scope="col">Price(Rs)</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Food Order Id</th>
+             
+             
+              <th scope="col">Update</th>
+              <th scope="col">Delete</th>
+  
+  
+          </tr>
+  
+      </thead>
+  
+      <tbody>
+  
+        <tr>
+  
+          <tr *ngFor="let r of result.t">
+  
+          
+  
+          <td>{{r.productId}}</td>
+          <td>{{r.name}}</td>
+          <td>{{r.type}}</td>
+          <td>{{r.price * r.quantity}}</td>
+          <td>{{r.quantity}}</td>
+          <td>{{r.foodOrder.id}}</td>
+          
+          
+
+          
+
+
+
+          <td><button type="button" class="btn btn-primary" [routerLink]="['/updateitems/',r.id]" >Update</button></td>
+          <td><button type="button" class="btn btn-primary" (click)="deleteItem(r.id)">Delete</button></td>   
+
+          <!-- <td><button type="button" class="btn btn-primary" (click)="bill(r.foodOrder.email,r.foodOrder.id)">Bill</button></td> -->
+        
+
+
+        </tr>
+
+    </tbody>
+
+  </table>
+  </div>
