@@ -1,0 +1,139 @@
+<div class="container">
+  <br>
+
+    <h3>Add Food Order Details</h3>
+  <br>
+
+    <form #addData="ngForm" (ngSubmit)="saveOrder(addData)">
+        <div class="form-group">
+
+            <input type="text"
+            class="form-control"
+            aria-describedby="emailHelp"
+            ngModel
+            id="status"
+            name="status"
+            #status="ngModel"
+            placeholder="Enter the Status"
+            required
+            [(ngModel)]="order.status"
+            >
+  
+          </div>
+          
+          <div class="form-group">
+              <input type="text"
+              class="form-control"
+              aria-describedby="emailHelp"
+              ngModel
+              id="totalPrice"
+              name="totalPrice"
+              #totalPrice="ngModel"
+              required
+              [(ngModel)]="order.totalPrice"
+              placeholder="Enter the total price"
+  
+              >
+  
+            </div>
+
+            <div class="form-group"> 
+              <input type="text"
+              class="form-control"
+              aria-describedby="emailHelp"
+              ngModel
+              id="orderCreatedTime"
+              name="orderCreatedTime"
+              #orderCreatedTime="ngModel"
+              required
+              [(ngModel)]="order.orderCreatedTime"
+              placeholder="Enter the credited time"
+  
+              >
+  
+            </div>
+  
+            <div class="form-group">
+              <input type="text"
+              class="form-control"
+              aria-describedby="emailHelp"
+              ngModel
+              id="orderDeliveryTime"
+              name="orderDeliveryTime"
+              #orderDeliveryTime="ngModel"
+              required
+              [(ngModel)]="order.orderDeliveryTime"
+              placeholder="Enter the delivered time"
+              
+  
+              >
+  
+            </div>
+
+            <div class="form-group">
+                <input type="text"
+                class="form-control"
+                aria-describedby="emailHelp"
+                ngModel
+                id="customerName"
+                name="customerName"
+                #customerName="ngModel"
+                required
+                [(ngModel)]="order.customerName"
+                placeholder="Enter the Customer name"
+    
+                >
+    
+              </div>
+
+              
+            <div class="form-group">    
+                <input type="text"
+                class="form-control"
+                aria-describedby="emailHelp"
+                ngModel    
+                id="contactNumber"   
+                name="contactNumber"   
+                #contactNumber="ngModel"
+                required
+                [(ngModel)]="order.contactNumber"
+                placeholder="Enter the contact number"    
+                >
+                </div>
+                <div class="form-group">    
+                  <input type="email"
+                  class="form-control"
+                  aria-describedby="emailHelp"
+                  ngModel
+                  id="email"     
+                  name="email"     
+                  #email="ngModel"
+                  required
+                  [(ngModel)]="order.email"
+                  placeholder="Enter Email"     
+                  >
+                </div>
+
+                <div class="form-group">
+                <input type="text"
+                class="form-control"
+                aria-describedby="emailHelp"
+                ngModel
+                id="user_id"
+                name="user_id"
+                #id="ngModel"
+                placeholder="User ID"
+                required
+                [(ngModel)]="order.user.id"
+                >
+                </div>
+
+    
+    
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+             
+
+</div>
+
+
